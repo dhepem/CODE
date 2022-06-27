@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <div class="alert-box" id="alert">
+    <p id="title">아이디를 입력안하였어요</p> 
+    <!-- <button onclick="document.getElementById('alert').style.display='none';"></button> -->
+    <!-- <button onclick="alert_close()"></button> -->
+    <!-- <button onclick="alert('alert','none')"> 닫기 </button> -->
+    <button id="close"> 닫기 </button>
+  </div>
+
+  <!-- <button onclick="document.getElementById('alert').style.display = 'block';">버튼</button> -->
+  <!-- <button onclick="alert_open()">버튼</button> -->
+  <button onclick="alert_open('아이디를 입력해라')" id="button1">버튼</button>
+  <button onclick="alert_open('비번을 입력해라')" id="button2">버튼1</button>
+
+  
+  <!-- <h2 id="hello">안녕하세요</h2>
+  <h2 id="hi">올때메로나</h2> -->
+
+  <script>
+
+    // document.getElementById('hello').innerHTML='안녕';
+    // document.getElementById('hello').style.fontSize='50px';
+    // document.getElementById('hi').innerHTML='올때바밤바';
+
+  
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+
+    function alert_open(content) {
+      document.getElementById('title').innerHTML = content;
+      document.getElementById('alert').style.display = 'block';
+    }
+    
+    document.getElementById('close').addEventListener('click', function() {
+      document.getElementById('alert').style.display = 'none';
+    })
+
+  </script>
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  
+</body>
+</html>

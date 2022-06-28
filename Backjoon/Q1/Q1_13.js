@@ -5,20 +5,26 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+let count = 0;
 let input = [];
-let sum=0;
 
 rl.on('line',function(line){
-  input = line.split(" ").map((el) => parseInt(el));
-  rl.close();
+  count += 1;
+  input.push(line);
+
+  if(count === 2) {
+    rl.close();
+  }
 })
 
 rl.on('close',function(){
   let A = input[0];
   let B = input[1];
-  while(B > 0){
-    sum += B%10;
-    console.log(A*B);
-    B /= 10;
-  }
+  let num = B % 10;
+  let tennum = Math.floor((B%100)/10);
+  let hundrednum = Math.floor(B%100);
+  console.log(A*num);
+  console.log(A*tennum);
+  console.log(A*hundrednum);
+  console.log(A*B);
 })

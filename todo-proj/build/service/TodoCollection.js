@@ -1,9 +1,4 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const TodoItem_1 = __importDefault(require("../model/TodoItem"));
+import TodoItem from '../model/TodoItem';
 class TodoCollection {
     constructor(userName, todoItems = []) {
         this.userName = userName;
@@ -18,7 +13,7 @@ class TodoCollection {
         while (this.getTodoById(this.nextId)) {
             this.nextId++;
         }
-        this.itemMap.set(this.nextId, new TodoItem_1.default(this.nextId, task));
+        this.itemMap.set(this.nextId, new TodoItem(this.nextId, task));
         return this.nextId;
     }
     // includeComplete -> true : 모든 할일 몰록
@@ -46,4 +41,4 @@ class TodoCollection {
         }
     }
 }
-exports.default = TodoCollection;
+export default TodoCollection;

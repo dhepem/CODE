@@ -6,12 +6,12 @@
     "node-fetch": "^2.6.7",
     "nodemon": "^2.0.18",
     "typescript": "^4.7.4",
-    "typescript-require": "^0.3.0",
-    "type":"module"
+    "typescript-require": "^0.3.0"
   },
   "scripts": {
     "start:build": "tsc -w",
     "start:run": "nodemon build/index.js",
-    "start": "concurrently npm:start:*"
+    "start": "concurrently npm:start:*",
+    "type":"module"
   }
 }

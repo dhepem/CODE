@@ -1,17 +1,18 @@
 {
-  "name": "graphql",
+  "name": "1-3-graphql-exp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "test",
     "start": "nodemon index.js"
   },
-  "author": "hamin",
+  "author": "yalco",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^3.9.0",
-    "convert-csv-to-json": "^1.3.3",
-    "graphql": "^16.5.0"
+    "apollo-server": "^2.19.0",
+    "convert-csv-to-json": "^1.0.0",
+    "graphql": "^15.4.0",
+    "lodash": "^4.17.21"
   }
 }
